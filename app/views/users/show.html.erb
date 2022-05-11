@@ -1,0 +1,19 @@
+<div class="div_text_centered">
+
+  <h2>Gossiper's first name</h2>
+    <p><%= User.all.find_by(id: @id).first_name %></p><br/>
+  <h2>Gossiper's last name</h2>
+    <p><%= User.find(@id).last_name  %></p><br/>
+  <h2>Gossiper's age</h2>
+    <p><%= User.find(@id).age %></p><br/>
+  <h2>Description of the Rumor</h2>
+    <p><%= User.find(@id).description %></p><br/>
+  <h2>Gossiper's email</h2>
+    <p><%= User.find(@id).email %></p><br/>
+  <h2>Gossiper's city</h2>
+    <p><%= User.find(@id).city.name %></p><br/>
+
+  <%= link_to "City of #{User.all.find_by(id: @id).first_name}", city_path(User.find(@id).city.id), class:"btn btn-primary" %>
+
+  <hr>
+</div>

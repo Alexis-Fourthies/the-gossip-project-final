@@ -1,0 +1,28 @@
+<% if @gossip.errors.any? %>
+  <div class="alert alert-danger" role="alert">Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</div>
+  <ul>
+    <% @gossip.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+
+<% end %>
+
+<!--Cette page va contenir notre form pour faire NEW et CREATE-->
+<div class="div_text_centered">
+<h2>Create here your new juicy gossip !</h2>
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+
+  <h4><%= label_tag 'Title' %></h4>
+  <%= text_field_tag 'title'%>
+  <br /> <br />
+
+  <h4><%= label_tag 'Content' %></h4>
+  <%= text_area_tag 'content'%>
+  <br /> <br />
+
+  <%= submit_tag "Create Post", {class: "btn btn-primary"} %>
+  <br><br>
+<% end %>
+
+</div>

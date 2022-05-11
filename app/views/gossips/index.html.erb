@@ -1,0 +1,27 @@
+<% if @gossip.save %>
+<div class="alert alert-success" role="alert">
+  <p>Le message est bien enregistré</p>
+  </div>
+<% end %> 
+
+
+<h2 class="h1_welcome"><%= "Welcome #{current_user.first_name} "%></h2>
+
+<h1 class="h1_welcome">Here you can see all the Gossips!</h1>
+<h3 class="h1_welcome"><%= "Today you can find #{@gossip_count} gossips" %></h3>
+<hr>
+
+<div class="row">
+  <% Gossip.all.sort.each_with_index do |gossip, index|  %>
+    <div class="col-sm-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title"><%= gossip.title %></h5>
+          <p class="card-text"><%= gossip.user.first_name %></p>
+          <%= link_to "Gossip n°#{gossip.id}", gossip_path(gossip.id), class:"btn btn-primary" %>
+        </div>
+      </div>
+      <br/>
+    </div>
+  <% end %>
+</div>

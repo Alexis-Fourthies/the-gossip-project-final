@@ -1,0 +1,18 @@
+<div class="div_text_centered">
+<h2>Login</h2>
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+
+  <h4><%= label_tag 'Email' %></h4>
+  <%= text_field_tag 'email'%>
+  <br /> <br />
+
+
+  <h4><%= label_tag 'Password' %></h4>
+  <%= password_field_tag 'password'%>
+  <br /> <br />
+
+  <%= submit_tag "Log into The Gossip Project", {class: "btn btn-primary"} %>
+  <br><br>
+<% end %>
+
+</div>

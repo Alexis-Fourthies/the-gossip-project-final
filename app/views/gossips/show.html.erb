@@ -1,0 +1,46 @@
+<div class="div_text_centered">
+  <h2>Gossiper</h2>
+    <p><%= Gossip.find(@id).user.first_name %></p><br/>
+  <h3>Title</h3>
+    <p><%= Gossip.find(@id).title %></p><br/>
+  <h4>Contenu</h4>
+    <p><%= Gossip.find(@id).content %></p><br/>
+  <h5>Publishing Date</h5>
+    <p><%= Gossip.find(@id).created_at %></p><br/>
+
+  <%= link_to "Who is Gossiper #{Gossip.find(@id).user.first_name}?", user_path(Gossip.find(@id).user.id), class:"btn btn-primary" %>
+  
+  <%if current_user.id == Gossip.find(@id).user.id%>
+    <%= link_to "Edit the Gossip", edit_gossip_path(Gossip.find(@id).id), class:"btn btn-secondary" %>
+    <%= link_to "Supprimer le Gossip", gossip_path(Gossip.find(@id).id), class:"btn btn-danger",  data: {confirm: 'Etes-vous sur?'}, method:"DELETE"%>
+  <%end%>
+  <hr>
+
+</div>
+
+<h2>Comments section</h2>
+<div class="row">
+  <% Gossip.find(@id).comments.each do |comment|  %>
+    <div class="col-sm-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title"><%= comment.author.first_name%> <%= comment.author.last_name%></h5>
+          <p class="card-text"><%= comment.content %></p>
+        </div>
+      </div>
+      <br/>
+    </div>
+  <% end %>
+</div>
+
+<div>
+  <form action= <%= gossips_create_comment_path %> method="POST" >
+    <div class ="form-group">
+      <label for="exampleInputEmail1">Add a comment !</label>
+      <input type="hidden" name="authenticity_token" placeholder="Your comment" value="<%= form_authenticity_token %>">
+      <input type="text" id="content" name="content" class="form-control">
+      <input type="hidden" id="gossip_id" value="@id">
+    </div>
+  <input type="submit" value="Valider" class ="btn btn-secondary">
+  </form>
+</div>
