@@ -1,14 +1,14 @@
 <% if @gossip.save %>
 <div class="alert alert-success" role="alert">
-  <p>Le message est bien enregistré</p>
+  <p>Le potin a bien été ajouté !</p>
   </div>
 <% end %> 
 
 
-<h2 class="h1_welcome"><%= "Restons discret, #{current_user.first_name} !"%></h2>
+<h2 class="h1_welcome text-black"><%= "Restons discrets, #{current_user.first_name} :)"%></h2>
 
-<h1 class="h1_welcome">Voici la liste des potins</h1>
-<h3 class="h1_welcome"><%= "#{@gossip_count} potins sont d'actualité" %></h3>
+<h3 class="h1_welcome">Voici la liste des potins</h3>
+
 <hr>
 
 <div class="row bg-dark mt-5">
