@@ -43,15 +43,28 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <div class="container">
-          <h1 class="display-3 h1_jumbo">Bienvenue dans l'antre des Potins !</h1>
+          <h1 class="display-3 h2_jumbo">Bienvenue dans l'antre des Potins !</h1>
           
         
         </div>
       </div>
+
 
       <%= yield %>  
 
       </div> 
     </main>  
   </body>
+  <div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">© Alexis Fourthies</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <%= image_tag "logo7.png", height: 48%>
+    </a>
+
+    <p class="nav col-md-4 justify-content-end text-muted">Toute poursuite est inutile</p>
+
+  </footer>
+</div>
 </html>

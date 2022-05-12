@@ -1,15 +1,16 @@
+<br/><br/>
 <h1>Édition du Potin</h1>
-
+<br/><br/>
 <%= form_for @gossips do |f|%>
 
   <div class ="form_group">
-    <label>Titre du Potin</label>
-    <%= f.text_field :title, class: 'form-control'%>
+    <label class ="mb-3">Titre du Potin</label>
+    <%= f.text_field :title, class: 'form-control mx-auto w-25'%>
   </div>
-<br>
+<br><br/><br/>
   <div class ="form_group">
-    <label>Contenu</label>
-    <%= f.text_area :content, class: 'form-control'%>
+    <label class ="mb-3">Contenu</label>
+    <%= f.text_area :content, class: 'form-control mx-auto w-50'%>
   </div>
 <br>
   <div class ="form_group">
@@ -17,3 +18,4 @@
     </div>
 
 <% end%>
+<br/><br/><br/><br/>

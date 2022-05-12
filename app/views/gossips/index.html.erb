@@ -4,7 +4,7 @@
   </div>
 <% end %> 
 
-
+<br/>
 <h2 class="h1_welcome text-black"><%= "Restons discrets, #{current_user.first_name} :)"%></h2>
 
 <h3 class="h1_welcome">Voici la liste des potins</h3>
@@ -13,7 +13,7 @@
 
 <div class="row bg-dark mt-5">
   <% Gossip.all.sort.each_with_index do |gossip, index|  %>
-    <div class="col-sm-4 w-25">
+    <div class="col-sm-4 w-25 mx-auto">
       <div class="card border-dark text-center text-white bg-secondary">
         <div class="card-body">
           <h5 class="card-title"><%= gossip.title %></h5>

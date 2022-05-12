@@ -1,5 +1,7 @@
+<br/><br/>
 <div class="div_text_centered">
  <h1>Profil de <%= User.all.find_by(id: @id).first_name %></h1>
+ <br/>
   <h2>Prénom</h2>
     <p><%= User.all.find_by(id: @id).first_name %></p><br/>
   <h2>Nom</h2>
@@ -15,5 +17,6 @@
 
   <%= link_to "Ville de #{User.all.find_by(id: @id).first_name}", city_path(User.find(@id).city.id), class:"btn btn-primary" %>
 
-  <hr>
+
 </div>
+<br/><br/>

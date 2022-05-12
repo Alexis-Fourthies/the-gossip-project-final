@@ -1,10 +1,12 @@
+<br/><br/>
 <div class="div_text_centered">
 <h2>Connexion</h2>
+<br/><br/>
 <%= form_tag url_for(action: 'create'), method: "post" do %>
 
   <h4><%= label_tag 'Email' %></h4>
   <%= text_field_tag 'email'%>
-  <br /> <br />
+ <br/><br/><br/>
 
 
   <h4><%= label_tag 'Mot de passe' %></h4>
@@ -16,3 +18,4 @@
 <% end %>
 
 </div>
+<br/><br/><br/><br/>

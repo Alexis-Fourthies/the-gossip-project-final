@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Salut vous,
 
-Things you may want to cover:
+THP week 6 day 1 : program one more version of The Gossip Project with Rails. Full MVC architecture required.
 
-* Ruby version
+To get the application up and running :
 
-* System dependencies
+Clone this repo
+Run '$ rails server' in your terminal
+Go to http://localhost:3000/ with your web browser
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Cheers
