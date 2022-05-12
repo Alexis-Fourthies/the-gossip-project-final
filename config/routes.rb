@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:new, :create, :index, :destroy]
   end
   resources :sessions, only: [:new, :create, :destroy]
+  resources :likes, only: [:create, :destroy]
 
   get '/', to: 'gossips#index'
   get '/team', to: 'team#our_team'

@@ -8,6 +8,12 @@
   <h5>Date de publication</h5>
     <p><%= Gossip.find(@id).created_at %></p><br/>
 
+  <form action="/likes" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="gossip_id" value="@id">
+    <input type="submit" value="J'aime">
+  </form>
+  <br/>
   <%= link_to "Profil de #{Gossip.find(@id).user.first_name}", user_path(Gossip.find(@id).user.id), class:"btn btn-primary" %>
   
   <%if current_user.id == Gossip.find(@id).user.id%>
@@ -17,7 +23,7 @@
   <hr>
 
 </div>
-
+<br/>
 <h2>Commentaires</h2>
 <div class="row">
   <% Gossip.find(@id).comments.each do |comment|  %>

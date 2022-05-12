@@ -5,7 +5,7 @@ class Gossip < ApplicationRecord
     has_many :tags, through: :join_table_gossip_tags
     has_many :comments
     has_many :authors
-
+    has_many :likes
     validates :title, presence: true, length: { in: 3..14 }
 
     validates :content, presence: true

@@ -7,6 +7,6 @@ class User < ApplicationRecord
     has_many :received_messages, foreign_key: 'recipient_id', class_name: 'PrivateMessage'
 
     has_many :comments, foreign_key: 'author_id', class_name: 'Comment'
-
+    has_many :likes
     validates :password, presence: true, length: { minimum: 4 }
 end
