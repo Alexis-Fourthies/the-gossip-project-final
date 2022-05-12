@@ -5,20 +5,20 @@
 <% end %> 
 
 
-<h2 class="h1_welcome"><%= "Welcome #{current_user.first_name} "%></h2>
+<h2 class="h1_welcome"><%= "Restons discret, #{current_user.first_name} !"%></h2>
 
-<h1 class="h1_welcome">Here you can see all the Gossips!</h1>
-<h3 class="h1_welcome"><%= "Today you can find #{@gossip_count} gossips" %></h3>
+<h1 class="h1_welcome">Voici la liste des potins</h1>
+<h3 class="h1_welcome"><%= "#{@gossip_count} potins sont d'actualité" %></h3>
 <hr>
 
-<div class="row">
+<div class="row bg-dark mt-5">
   <% Gossip.all.sort.each_with_index do |gossip, index|  %>
-    <div class="col-sm-4">
-      <div class="card text-center">
+    <div class="col-sm-4 w-25">
+      <div class="card border-dark text-center text-white bg-secondary">
         <div class="card-body">
           <h5 class="card-title"><%= gossip.title %></h5>
           <p class="card-text"><%= gossip.user.first_name %></p>
-          <%= link_to "Gossip n°#{gossip.id}", gossip_path(gossip.id), class:"btn btn-primary" %>
+          <%= link_to "Potin n°#{gossip.id}", gossip_path(gossip.id), class:"btn btn-dark" %>
         </div>
       </div>
       <br/>

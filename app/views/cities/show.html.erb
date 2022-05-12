@@ -1,14 +1,14 @@
 <div class="div_text_centered">
-  <h2>City</h2>
+  <h2>Ville</h2>
     <p><%= City.find(@id).name %></p><br/>
 
 <div class="row">
   <%@city_gossips.each do |gossip| %>
     <div class="col-sm-4 mx_auto">
-      <div class="card text-center">
+      <div class="card text-center bg-secondary">
         <div class="card-body">
           <p class="card-text"><%= gossip.content%></p>
-          <p class="card-text"><%= gossip.user.first_name%>  <%= gossip.user.last_name%></p>
+          <p class="card-text fw-bold"><%= gossip.user.first_name%>  <%= gossip.user.last_name%></p>
         </div>
       </div>
       <br/>

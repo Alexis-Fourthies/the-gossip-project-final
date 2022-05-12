@@ -1,1 +1,28 @@
-test our_team
+<h1>Voici la dream team !<h1>
+<div class="card mb-4 mt-5 mx-auto bg-secondary" style="max-width: 640px;">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <%= image_tag "Alexis.jpg", height: 300 %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title h3">Alexis</h5>
+        <p class="card-text h6">N'a jamais cuit des pâtes sans les rendre al dente. Aime le code et surtout la bière.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mb-3 mx-auto bg-secondary" style="max-width: 640px;">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <%= image_tag "Julien.jpg", height: 300 %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title h3">Julien</h5>
+        <p class="card-text h6">Apprenti codeur qui aime prendre de la hauteur... Aime le codage, la montagne, la nature... et les biscuits !</p>
+      </div>
+    </div>
+  </div>
+</div>
+<%= yield %>
